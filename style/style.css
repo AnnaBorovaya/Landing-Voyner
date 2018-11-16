@@ -1,0 +1,1519 @@
+/* сброс родных натсроек*/  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border:none;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    font-weight: normal;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    text-decoration: none;
+}
+
+ul, ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+body{
+    margin: 0;
+    color: #777;
+    font: 300 15px/1 'Open Sans', sans-serif;  
+}
+
+/* конец сброса родных настроек*/
+
+/*дефолтные стили*/
+
+.bg-black{
+    background-color: #000;
+}
+
+.bg-grey{
+    background-color: #f8f8f8;
+}
+
+.section-big{
+    padding: 140px 0;
+}
+
+.section-small{
+    padding: 70px 0;
+}
+
+.title{
+    font: 400 18px/1 'Dosis', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    margin-bottom: 75px;
+    color: #111111
+}
+
+.title > *{
+    font-size: 18px
+}
+
+.title.light{
+    font-weight: 300;
+    letter-spacing: .3em;
+    line-height: 25px
+}
+
+.text-white{
+    color: white !important;
+}
+
+.default-text{
+    line-height: 1.733;
+}
+
+.text-center{
+    text-align: center
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/*дефолтные стили для кнопок*/
+.btn{
+    font: 400 14px/1 'Open Sans', sans-serif;  
+    letter-spacing: 0.2em;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: #111111;
+    line-height: 0;
+    line-height: 1
+}
+
+.btn:hover{
+    opacity:0.5
+}
+
+.btn.btn-black:hover{
+    background-color:#323232;
+    color: white
+}
+
+.btn-grey{
+    padding: 13px 38px;
+    background-color: #cfcfcf;
+    display: inline-block;
+}
+
+.btn-black{
+    background-color: #323232;
+    padding: 13px 20px;
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.btn-small{
+    background-color: #e5e5e5;
+    padding: 9px 15px;
+    font-size: 11px;
+    color: #777;
+}
+
+/**romb**/
+.romb-icon{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    font-size: 14px;
+    border-radius:2px ;
+    transform: rotate(45deg)
+}
+
+.romb-icon > *{
+    transform: rotate(-45deg)
+}
+
+.romb-icon.black-icon{
+    background-color: black;
+    color: white
+}
+
+.romb-icon.white-icon{
+    background-color: white;
+    color: black
+}
+
+.romb-icon.transparent-icon{
+    border: 1px solid rgba(0, 0, 0, .7);
+    color:#111;
+    line-height: 21px;
+}
+
+.romb-icon.large{
+    width: 27px;
+    height: 27px;
+    line-height: 27px
+}
+
+/*media для дефолтных стилей*/
+@media(max-width:767px){
+    .section-big{
+        padding: 80px 0
+    }
+    .section-small {
+        padding: 40px 0
+    }
+    .title {
+        margin-bottom: 40px
+    }
+}
+
+/*конец дефолтных стилей*/
+
+/* настройки Greed*/
+[class*="col-size-"]{
+    width: 33.3333%;
+    float: left;
+    padding: 0 15px 
+}
+
+.col-size-6{
+    width: 50%;
+}
+
+.col-size-8{
+    width: 66.666%;
+    margin-left: 16.66666667%;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/*media for Greed*/
+@media (max-width:991px){
+    .col-size-4{
+        width: 50%
+    }
+}
+
+@media(max-width:767px){
+    .col-size-6{
+        width: 100%;
+    }
+}
+@media(max-width:599px){
+    .col-size-4{
+        width: 100%
+    }
+    .section-big{
+        padding: 80px 0
+    }
+    .section-small {
+        padding: 40px 0
+    }
+    .title {
+        margin-bottom: 40px
+    }
+}
+/* конец настройки Greed*/
+
+
+/*Главная страница*/
+.wrapper-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+header{
+    padding: 27px 0 27px 0;
+    position: absolute;
+    background-color:transparent;
+    right: 0;
+    left: 0;
+    width: 100%;   
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a{
+    line-height: 21px;
+    color: white;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    transition: 0.3s
+}
+
+nav a+a{
+    margin-left: 35px;
+}
+
+nav a:hover{
+    color: black
+}
+
+.inner{
+    background: url('../img/bg-main.jpg') no-repeat center/cover;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inner h1 + h3{
+    margin-top: 97px
+}
+
+.inner h3{
+    font-size: 19px;  
+}
+
+.inner h1{
+    font: 400 30px/1 'Dosis', sans-serif;
+    letter-spacing: 1.7em;
+    text-transform: uppercase;
+    text-indent: 1.7em;
+}
+
+.inner .romb-icon{
+    bottom: -200px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 12px;
+    padding-top: 5px
+}
+
+div[class='logo']{
+    border-bottom: 3px solid transparent;
+    transition: 0.5s
+}
+
+div[class='logo']:hover{
+    border-bottom: 3px solid white
+}
+
+/*media*/
+@media(max-width:1199px){
+    .inner h1 + h3 {
+        margin-top: 50px; 
+    }
+}
+@media(max-width:991px){
+    .inner h1 {
+        letter-spacing: 0.7em;
+        text-indent: .7em
+    }
+}
+@media(max-width:767px){
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    nav a+a{
+        margin-left: 0;
+    }
+    .wrapper-header{
+        display: block;
+    }
+    .logo img{
+        margin: 0 auto
+    }
+    .wrapper-header{
+        text-align: center
+    }
+}
+@media(max-width:599px){
+    .inner h1 {
+        letter-spacing: 0.6em;
+        text-indent: .6em;
+    }
+}
+@media(max-width:479px){
+    .inner h1 {
+        letter-spacing: 0.2em;
+        text-indent: .2em;
+    }
+    .inner h3 {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+/*конец Главной страницы*/
+
+
+/*страница About-studio*/
+blockquote{
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+blockquote span{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.about-studio-text{
+    margin-bottom: 100px
+}
+
+.our-team img{
+    filter: grayscale();
+}
+
+.our-team .im {
+    margin-bottom: 27px;
+}
+
+.team-info{
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    padding: 0 10px;
+}
+
+.team-info span{
+    display: block;
+}
+
+.team-info .other{
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.im{
+    position: relative;
+}
+
+.skills{
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #131313;
+    transition: all 0.3s linear;
+    transform: scale(0.8);
+    padding: 40px;
+}
+
+.im:hover .skills{
+    opacity: 0.9;
+    transform: scale(1)
+}
+
+.skills .title{
+    margin-bottom: 25px;
+}
+
+.skills p{
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 40px;
+}
+
+.progress{
+    background-color:rgba(255, 255, 255, 0.15);
+    height: 15px;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.progress-bar{
+    width: 90%;
+    background-color:rgba(255, 255, 255, 0.75);
+}
+
+.progress-wrap span{
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 5px
+}
+
+.progress-wrap+.progress-wrap {
+    margin-top: 20px;
+}
+
+.progress-bar{
+    background-color: white;
+    width: 80%;
+    height: 100%;
+}
+
+.progress-bar-2{
+    width: 40%;
+}
+
+.progress-bar-3{
+    width: 60%;
+}
+
+.progress-bar-4{
+    width: 20%;
+}
+
+/*media*/
+@media (max-width:1199px){
+    .skills{
+        padding: 30px;
+    }
+    .skills p { 
+        margin-bottom: 20px;
+    }
+    .progress-wrap+.progress-wrap {
+        margin-top: 15px;
+    }   
+}
+
+@media(max-width:991px){   
+    .about-studio-text .default-text {
+        margin-bottom: 20px
+    }
+    .about-studio-text {
+        margin-bottom: 60px;
+    }
+    .middle-resize{
+        transform: translateX(50%)
+    }
+    blockquote{
+        margin-bottom: 20px;
+    }
+    .im{
+        display: inline-block;
+    }
+    .team-item{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .our-team .row>div[class^='col-']:last-child .team-item{
+        margin-bottom: 0;
+    }
+    .progress-wrap+.progress-wrap {
+        margin-top: 30px;
+    } 
+
+}
+
+@media(max-width:767px){
+    .progress-wrap+.progress-wrap {
+        margin-top: 10px;
+    } 
+    .progress-wrap .progress{
+        height: 10px;
+    }
+    .skills {
+        padding: 20px;
+    }
+}
+
+
+@media(max-width:599px){
+    .progress-wrap+.progress-wrap {
+        margin-top: 30px;
+    } 
+    .progress-wrap .progress{
+        height: 15px;
+    }
+    .skills {
+        padding: 30px;
+    }
+    .middle-resize{
+        transform: none
+    }
+}
+
+@media(max-width:479px){
+    .progress-wrap+.progress-wrap {
+        margin-top: 10px;
+    } 
+    .progress-wrap .progress{
+        height: 10px;
+    }
+
+}
+/*конец страницы About-studio*/
+
+    
+/* страница servises*/
+.servises .more-padding{
+    margin-bottom: 95px
+}
+
+.tab{
+    display: flex;
+    justify-content: center;
+}
+
+.tab>li{
+    margin-bottom: 0;
+    width: 20%;
+    text-align: center;
+}
+
+.tab>li>a{
+    padding: 0;
+    margin-right: 0;
+    color: rgba(17, 17, 17, 0.5);
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.tab>li:hover a{
+    color: #000000;
+}
+
+.tab>li a span {
+    display: block;
+    line-height: 1.3;
+}
+
+.tab>li .icon {
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.servises-tab .tab-content{
+    margin-top: 65px
+}
+
+/*media*/
+@media (max-width:1199px){
+    .tab>li a span{
+       letter-spacing: 0.2em;
+    }
+}
+
+@media (max-width:991px){
+    
+    .servises-tab .default-text {
+        margin-bottom: 20px
+    }
+
+    .servises.section-big{
+        padding-bottom: 80px;
+        padding-top: 60px
+    }
+        
+    .tab{
+        flex-wrap:wrap;
+    }
+    .tab>li{
+        margin-bottom: 30px;
+        width: 30%
+    }    
+    .servises-tab .tab-content {
+        margin-top: 35px;
+    }
+}
+
+/*media*/
+@media(max-width:767px){
+    .servises .default-text {
+        margin-bottom: 20px;
+    }
+    .tab>li{
+        width: 50%
+    } 
+}
+
+@media(max-width:479px){
+    .tab>li{ 
+        width: 100%
+    } 
+    
+    .servises .more-padding{
+        margin-bottom: 65px
+    }
+}
+/*конец servises*/
+
+/* страница lets talk*/
+.lets-talk-text p{
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+.lets-talk-text{
+    padding-top: 140px ;
+    padding-bottom: 140px;
+}
+
+.title.less-margin{
+    margin-bottom: 20px;
+}
+
+.lets-img{
+    margin-top: -32px
+}
+
+.monitor{
+    position: relative;
+}  
+
+.animation{
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    width: 84.5%;
+    height: 72%;
+    overflow: hidden;
+}
+
+.animation img{
+    transition: 0.5s all linear
+}
+
+.animation img:hover{
+    transform: translateY(-2260px);
+    transition: 5s all linear
+}
+
+/*media*/
+@media(max-width:1199px){
+    .lets-talk-text {
+        padding-top: 80px;
+        padding-bottom: 80px
+    }
+    .lets-talk-text .title {
+        margin-bottom: 50px;
+    }
+    .animation {
+        left: 22px;
+        top: 22px;
+        width: 91%;
+        height: 72%;
+    }
+    .animation img:hover{
+        transform: translateY(-2000px);
+    }
+}
+
+@media (max-width:991px){
+    .monitor {
+        top: 50px;
+    }
+    .lets-img{
+        margin-top: 0;
+    }
+    .animation {
+        left: 16px;
+        top: 16px;
+        width: 91%;
+        height: 72%;
+    }
+    .animation img:hover{
+        transform: translateY(-1510px);
+    }
+}
+    
+@media(max-width:767px){
+    .monitor {
+        top: 0
+    }
+    .animation{    
+        left: 43px;
+        top: 24px;
+        width: 84.5%;
+        height: 72%;
+    }
+    .lets-img{
+        margin: 0 auto;  
+    }
+    .animation img:hover{
+        transform: translateY(-2270px);
+    }
+}
+@media(max-width:599px){
+    .animation{    
+        left: 21px;
+        top: 20px;
+        width: 90.7%;
+        height: 72%;
+    }
+    .animation img:hover{
+        transform: translateY(-1920px);
+    }
+}
+
+@media(max-width:479px){
+    .animation {
+        left: 13px;
+        top: 13px;
+        width: 90.7%;
+        height: 72%;
+    }
+    .animation img:hover{
+        transform: translateY(-1240px);
+    }
+}
+
+/*конец страницы Lets talk*/
+
+/*начало страницы portfolio*/
+.default-section.portfolio{
+    margin-bottom: 0
+}
+
+.port-text{
+    max-width: 755px;
+    margin: 0 auto;
+}
+
+.grid-buttons{
+    text-align: center;
+}
+
+.izotop-wrapper .button{
+    margin-right: 33px ;
+    margin-left: 33px;
+    margin-top: 82px; 
+    margin-bottom: 50px; 
+    background-color: transparent; 
+    padding-right: 33px ;
+    padding-left: 33px; 
+    outline: transparent;   
+}
+
+.izotop-wrapper .button span{
+    font-family:'Open Sans', sans-serif;
+    color: gray;
+    font-weight: 400;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.izotop-wrapper .button:hover span{
+    border-bottom: 1px solid #111111;
+    color: #111111
+}
+
+.izotop-wrapper.nav.nav-tabs{
+    text-align: center
+}
+
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid-item{
+    width: 33.333%;
+    margin-bottom: 6px;
+    float: left;
+}
+
+.grid-item img{
+    width: 100%;
+    filter: grayscale();
+    transition: all 0.3s ease-out
+}
+
+.grid-item:hover img{
+    filter: grayscale(0);
+}
+
+.why-choose-us{
+    clear: both;
+}
+
+.like div.title span{
+    display: block;
+}
+
+.like{
+    clear: both;
+}
+
+/*media*/
+@media (max-width:1199px){
+    .izotop-wrapper .button{
+        margin-right: 15px ;
+        margin-left: 15px;
+    }
+}
+@media (max-width:991px){
+    .grid-item{
+        width: 50%
+    }
+}
+
+@media (max-width:991px){
+    .izotop-wrapper .button{
+        width: 40%;
+        margin-bottom: 0;
+    }
+    .grid{
+        margin-top: 60px
+    }
+    
+    .item-why-choose-us {
+        margin-bottom: 30px;
+        text-align: center
+    }
+        .why-choose-us-content .row+.row {
+            margin-top: 0;   
+    }
+}
+@media(max-width:479px){
+    .grid-item{
+        width: 100%
+    }
+    .izotop-wrapper .button{
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top:40px
+    }
+}
+/**конец страницы портфолио*/
+   
+
+/*страница why-choose-us */
+.title-why-choose{
+    font: 400 14px/1 'Dosis', sans-serif;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: #111111
+}
+
+.why-choose-us .title{
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.item-why-choose-us{
+    font-size: 14px;
+    line-height: 1.78;
+    margin-top: 80px;
+}
+
+.title-why-choose.text-center{
+    margin-bottom: 33px;
+    margin-top: 33px;
+}
+
+.item-why-choose-us span{
+    font-size: 48px
+}
+
+@media (max-width:767px){
+    .item-why-choose-us {
+        margin-top: 50px; 
+    }
+}
+/*конец страницы why-choose-us  */
+
+/*carousel*/
+.reviews {
+    padding: 140px;
+    overflow: hidden;
+}
+.carousel-content .icon{
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white
+}
+
+.carousel-content .title{
+    margin-bottom: 35px;
+}
+
+.carousel-content p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 20px;
+    max-width: 750px;
+    margin: 0 auto 20px auto;
+    line-height: 1.7
+}
+
+.carousel-content .author{
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.2em
+}
+
+.reviews .owl-dots{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120px;
+}
+
+.reviews .owl-dots .owl-dot {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-clip: content-box;
+    border-radius: 50%;
+    margin-right: 5px;
+    outline: none
+}
+
+.reviews .owl-dots .active {
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next{
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    bottom: auto;
+    background-image: none;
+    opacity: 1;
+    color: #222;
+    text-shadow:none;
+    position: absolute;
+}
+
+.owl-carousel .owl-nav span{
+    position: absolute;
+    transform: rotate(-45deg);
+    font-size: 24px
+}
+
+.owl-prev span{
+    top: 9px;
+    right: 18px; 
+}
+
+.owl-next span{
+    left: 18px;
+    bottom: 9px;
+}
+
+.owl-carousel .owl-nav button.owl-next{
+    right: -182px;
+}
+
+.owl-carousel .owl-nav button.owl-prev{
+    left: -182px;
+}
+
+/*media*/
+@media (max-width:991px){
+    .carousel-content p {
+        padding: 0 30px
+    }
+}
+
+@media(max-width:767px){
+    .reviews {
+        padding: 80px;
+    }
+    .owl-carousel .owl-nav button.owl-prev{
+        left: -140px;
+    }
+    .owl-carousel .owl-nav button.owl-next{
+        right: -140px;
+    }
+    .reviews .owl-dots{
+        bottom: -60px;
+    }
+}
+
+@media(max-width:599px){
+    .carousel-content p{
+        font-size: 16px
+    }
+}
+
+@media (max-width: 479px){
+    .owl-prev span {
+        top: -2px;
+        right: 10px;
+    }
+
+    .owl-next span{
+        left: 7px;
+        bottom: 3px;
+    }
+    .reviews {
+        padding: 60px;
+    }
+    .carousel-content p {
+        padding: 0;
+        font-size: 14px
+    }
+    .carousel-content .title > * {
+        font-size: 16px;
+        letter-spacing: 0.3em;
+    }
+    .reviews .owl-dots{
+        bottom: -45px;
+    }
+}
+/*конец страницы Карусель*/
+
+/*Страница News*/
+.news-content h6{
+    font-size:15px ;
+    text-transform: uppercase;
+    letter-spacing: 0.19em;
+    color: #777777;
+    margin-top: 29px;
+    margin-bottom: 11px;
+}
+
+.news-content .data-author{
+    font-size:11px ;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: #999999;
+}
+
+.news-content p{
+    font-size:15px ;
+    color: #a2a2a2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.news-item img{
+    filter: grayscale();
+    transition: all 0.3s ease-out
+}
+
+.top-text a{
+    float: right;
+    font: 400 11px/1 'Dosis', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    color: #a1a1a1
+}
+
+.top-text .title{
+    float: left;
+    margin-bottom: 45px
+}
+
+.top-text{
+    overflow: hidden;
+}
+
+.news-item{
+    margin-top: 30px;
+}
+
+.news-item img:hover{
+    filter: grayscale(0)
+}
+
+.news i{
+    font-size: 12px
+}
+
+.contact-item-icon,
+.contact-item-content{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.contact-item-content span{
+    display: block;
+}
+
+/*media*/
+@media (max-width:991px){
+    .news-item img {
+        width: 100%;
+    }
+    .news .row>div + div .news-item{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 599px){
+    .top-text .title {
+        float: none;
+        margin-bottom: 15px;
+    }
+    .top-text a {
+        float: none;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+}
+/*конец страницы news*/
+
+
+/*subscribe*/
+.subscribe{
+    background-color: #f8f8f8
+}
+
+.subscribe-name.form-control{
+    width: 293px;
+    display: inline-block;
+    height: 41px;
+    vertical-align: middle
+}
+
+.form-subscrib button{
+    vertical-align: middle
+}
+
+.subscribe .stay{
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.form-subscribe{
+    margin-bottom: 20px
+}
+/*конец страницы подписки*/
+
+/*contact*/
+.contact-item-content{
+    margin-left: 15px;
+}
+
+.contact-item-content .contact-title{
+    font-size:12px ;
+    letter-spacing:0.3em ;
+    columns: #777777; 
+    margin-bottom: 10px;
+}
+
+.contact-item-content .contact-data{
+    font-size:15px ;
+    columns: #444; 
+}
+
+.contact-form{
+    margin-top: 80px;
+}
+
+.contact-form .form-control{
+    width: 100%;    
+}
+
+.form-col{
+    padding: 0 5px;
+}
+
+.form-row{
+    margin: 0 -5px;
+    overflow: hidden;
+}
+
+.form-control+.form-control{
+    margin-top: 10px;
+}
+
+.form-control{
+    border: 1px solid #e5e5e5;
+    border-radius:2px;
+    height: 36px;
+    padding: 6px 13px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    color: #777;
+    box-shadow: none;
+    outline: transparent;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: #939292;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 82px;
+    padding-top: 12px
+}
+
+.form-submit{
+    margin-top: 20px;
+    color: #aaaaaa;
+}
+
+.form-submit .reaq{
+    line-height: 41px
+}
+
+.reaq span{
+    font-size: 11px;
+    color: #aaaaaa;  
+}
+
+.reaq i{
+    font-size: 12px;
+}
+
+.reaq:hover{
+    color: #131313
+}
+
+/*media*/
+@media (max-width:1199px){
+    .contact-us .col-size-8{
+        width: 72%
+    }
+}
+    
+@media (max-width:991px){
+    .contact-item{
+        margin-bottom: 30px;
+    }
+    .contact-form {
+        margin-top: 50px;
+    }
+    .contact-item-content {
+        margin-left: 10px;
+    }
+}
+@media(max-width:767px){
+    .contact-us .col-size-8{
+        width: 100%;
+        margin-left: 0
+    }
+    .subscribe-name.form-control{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px
+    }
+    .contact-form .form-col {
+        width: 100%;
+    }
+    textarea{
+        margin-top: 10px
+    }
+}
+    
+@media (max-width: 599px){
+    .form-subscribe button{
+        width: 100%
+    }
+    .form-submit .reaq {
+        text-align: center;
+        margin-bottom: 10px;
+        display: block;
+        line-height: 18px
+    }
+    .form-submit a{
+        width: 100%;
+        text-align: center
+    }
+}
+/*конец страницы Контакт*/
+
+
+/*map*/
+.map{
+    overflow: hidden;
+    position: relative;
+}
+
+#map{
+    width: 100%;
+    height: 410px;
+}
+
+.map-overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    transition: all .3s ease-out;
+}
+
+.map-overlay.hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.map:hover .on-map-block{
+    opacity: 0;
+    transform: translateY(100%)
+}
+
+.map-text{
+    margin-top: 29px;
+    color: white;
+    display:flex
+}
+
+.on-map-block-content{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: 0.3s
+}
+
+.on-map-block-content .title{
+    margin-bottom:0
+}
+
+.on-map-block-content h3:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 85px;
+    width: 0;
+    background-color: currentColor;
+    transition: 0.3s;
+    height: 2px;
+    
+}
+
+.on-map-block-content h3:hover{
+    cursor: pointer
+}
+.on-map-block-content h3:hover:before{
+    left: 0;
+    right: 0;
+    width: 100%
+}
+
+/*media*/
+@media (max-width: 479px){
+    .on-map-block-content .title{
+        line-height: 1.3;
+    }
+    .on-map-block-content h3:before{
+        top: 100px;
+    }
+    .map-text {
+        display: block;
+    }
+}
+/*конец страницы Map*/
+
+
+/*footer*/
+footer{
+    background-color: #f8f8f8;
+    padding: 140px 0 55px 0
+}
+
+.copyrite span{
+    display: inline-block;
+}
+
+.footer-logo ul li{
+    display: inline-block;
+}
+.footer-logo ul li+li{
+    margin-left: 20px;
+}
+.footer-logo ul {
+    margin-bottom: 107px;
+}
+
+.footer-logo li:hover{
+    opacity: 0.5;
+}
+
+footer img{
+    display: inline-block;
+    margin-bottom: 24px;
+}
+
+.copyrite .copyrite-logo .year{
+    text-transform:uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5em;
+    font-family: 'Dosis', sans-serif;
+    color: #111111;
+}
+
+.copyrite .copyrite-logo i{
+    color: #b5b5b5;
+    font-size: 12px;
+    margin-right: 17px;
+}
+
+.copyrite .made{
+    font-size: 11px;
+    color: #b5b5b5
+}
+/*конец футера*/
+
+/*стрелочка*/
+.totop-button{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 14px solid #c6c6c6;
+    z-index: 1000;
+    transition: 0.3s;
+    border-radius: 4px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.totop-button:hover{
+    cursor: pointer;
+    border-bottom-color:#111;
+}
+
+.totop-button.show{
+    opacity: 1;
+    visibility: visible;
+}
+/*конец*/
